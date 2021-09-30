@@ -1,29 +1,31 @@
 //1a
 const jedi = [];
-console.log(jedi);
+console.log(jedi);//[]
 
 //1b
 jedi[0] = "Luke"
-console.log(jedi);
+console.log(jedi);//['Luke']
 
 //1c
 jedi.push("Obi-Wan Kenobi")
-console.log(jedi);
+console.log(jedi); //['Luke, 'Obi-Wan Kenobi']
 
 //1d
 jedi.unshift("Yoda")
-console.log(jedi);
+console.log(jedi);// ['Yoda','Luke','Obi-Wan Kenobi']
 
 //1e 
-console.log(jedi[1]);
+console.log(jedi[1]);// "Luke"
 
 //1f
 jedi.pop();
-console.log(jedi);
+// jedi.splice(2, 1)
+console.log(jedi);// [ 'Yoda', 'Luke' ]
 
 //1g
 jedi.shift();
-console.log(jedi);
+// jedi.splice(0, 1);
+console.log(jedi);// [ 'Luke' ]
 
 //2a
 const sithLords = ["Darth Vader", "Darth Sidious", "Darth Maul"];
@@ -47,10 +49,10 @@ const droids = {
     assassin: "IG-88"
 };
 //3b
-    console.log(droids["astromech"]);
+    console.log(droids["astromech"]);// R2-D2
 
 //3c
-console.log(droids.astromech);
+console.log(droids.protocol);
 
 //3d
 droids.assassin = "IG-11"
@@ -59,12 +61,15 @@ console.log(droids);
 
 //BONUS 
 //4
-console.log(starWarsVillains[0][6]);
+console.log(starWarsVillains[0][6]); // "V"
+// starWarsVillains[0][6];
+// 'Darth Vader'[6];
+// 'V';
 
 //5
 console.log(sithLords.slice(-2,-1));
 
-//6
+//6a
 const starWarsMovies = [
     {episodeOne: "The Phantom Menace", episodeTwo: "Attack of the Clones", episodeThree: "Revenge of the Sith"},
 
@@ -73,4 +78,6 @@ const starWarsMovies = [
     {episodeSeven: "The Force Awakens", episodeEight: "The Last Jedi", episodeNine: "The Rise of Skywalker"}
 ];
 
-console.log(starWarsMovies.splice(1,0,"Solo","Rogue One"));
+//6b
+starWarsMovies.splice(1,0,"Solo","Rogue One");
+console.log(starWarsMovies);
